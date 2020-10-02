@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1f1f1f;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 3;
+
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        height: inherit;
+    }
+
+    #navbar ul li {
+        height: inherit;
+    }
+
+
+    #navbar ul li a {
+        text-decoration: none;
+        display: block;
+        padding: 0px 20px;
+        height: inherit;
+        padding: 20px 30px;
+        color: #bbe1fa;
+        /* font-family: 'Josefin Sans', sans-serif; */
+        font-family: 'Source Code Pro', monospace;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    #navbar ul li a:hover {
+        background-color: #444;
+    }
+
+    #welcome-section {
+        height: 100vh;
+        background: url('pexels-rahul-pandit-1933900.jpg') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: azure;
+        z-index: 0;
+    }
+
+    #intro-section {
+        z-index: 2;
+    }
+
+    #intro {
+        color: #f4ebc1;
+        color: #bbe1fa;
+        font-size: 55px;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    #intro-desc {
+        font-size: 23px;
+        padding-top: 15px;
+        max-width: 600px;
+        color: #f8018b;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    #projects {
+        padding: 30px 80px;
+        background-color: #1f1f1f;
+    }
+
+    #projects-container {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+        margin: 0 auto;
+
+    }
+
+    .project-tile {
+        background-color: #1f1f1f;
+        padding: 10px 20px;
+        color: azure;
+        border-right: 1px solid #f8018b;
+        ;
+        height: 250px;
+    }
+
+    .projects-heading {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #f8018b;
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    .project-desc {
+        padding-bottom: 20px;
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .fa-code {
+        color: white;
+    }
+
+    .fa-desktop {
+        color: white;
+    }
+
+    #projects-section-heading {
+        text-align: center;
+        margin-bottom: 70px;
+        color: #bbe1fa;
+        font-size: 40px;
+        font-family: 'Source Code Pro', monospace;
+        font-family: 'Work Sans', sans-serif;
+
+    }
+
+    #contact-section {
+        padding: 30px 60px;
+        background-color: #1f1f1f;
+    }
+
+    #contact-container {
+        display: grid;
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+
+    .contact-links {
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .fab {
+        color: #f8018b;
+    }
+
+    .fab:hover {
+        color: white
+    }
+
+    .icon-text {
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .separator {
+        border: 0;
+        height: 1px;
+        background: #333;
+    }
+
+    @media (min-width: 350px) and (max-width: 500px) {
+        #item {
+            border-right: none;
+        }
+
+        #navbar ul li a {
+            font-size: 13px;
+            padding: 10px 10px;
+        }
+
+        #intro {
+            color: #f4ebc1;
+            color: #bbe1fa;
+            font-size: 25px;
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        #intro-desc {
+            font-size: 13px;
+        }
+
+        #projects-section-heading {
+            font-size: 30px;
+        }
+
+
+    }
+</style>
+
+
+
+<body>
+    <header>
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="#welcome-section">home</a></li>
+                    <li><a class="nav-link" href="#projects">projects</a></li>
+                    <li><a class="nav-link" href="#contact-section">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="welcome-section">
+        <div id="intro-section">
+            <h1 id="intro">Hello, I am XYZ</h1>
+            <p id="intro-desc">A web-developer</p>
+        </div>
+    </section>
+    <section id="projects">
+        <h1 id="projects-section-heading"><span>My Projects</span></h1>
+        <div id="projects-container">
+            <div class="project-tile">
+                <h1 class="projects-heading">title</h1>
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, doloribus?
+                </p>
+                <p class="icon-text">live :&nbsp;&nbsp;<a href=""><i class="fas fa-desktop"></i></a></p>
+                <br>
+                <p class="icon-text">code :&nbsp;&nbsp;<a href=""><i class="fas fa-code"></i></a></p>
+            </div>
+            <div class="project-tile">
+                <h1 class="projects-heading">title</h1>
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, doloribus?
+                </p>
+                <p class="icon-text">live :&nbsp;&nbsp;<a href=""><i class="fas fa-desktop"></i></a></p>
+                <br>
+                <p class="icon-text">code :&nbsp;&nbsp;<a href=""><i class="fas fa-code"></i></a></p>
+            </div>
+            <div class="project-tile">
+                <h1 class="projects-heading">title</h1>
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, doloribus?
+                </p>
+                <p class="icon-text">live :&nbsp;&nbsp;<a href=""><i class="fas fa-desktop"></i></a></p>
+                <br>
+                <p>code :&nbsp;&nbsp;<a href=""><i class="fas fa-code"></i></a></p>
+            </div>
+            <div class="project-tile">
+                <h1 class="projects-heading">title</h1>
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, doloribus?
+                </p>
+                <p class="icon-text">live :&nbsp;&nbsp;<a href=""><i class="fas fa-desktop"></i></a></p>
+                <br>
+                <p class="icon-text">code :&nbsp;&nbsp;<a href=""><i class="fas fa-code"></i></a></p>
+            </div>
+        </div>
+    </section>
+    <hr class="separator">
+    <section id="contact-section">
+        <h1 id="projects-section-heading">Let's Meet</h1>
+        <div id="contact-container">
+            <div class="contact-links">
+                <a href=""><i class="fab fa-linkedin fa-3x"></i></i></a>
+            </div>
+            <div class="contact-links">
+                <a href=""><i class="fab fa-github fa-3x"></i></a>
+            </div>
+            <div class="contact-links">
+                <a href="" id="profile-link" target="_blank"><i class="fab fa-free-code-camp fa-3x"></i></a>
+            </div>
+            <div class="contact-links">
+                <a href=""><i class="fab fa-facebook fa-3x"></i></a>
+            </div>
+        </div>
+
+    </section>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
